@@ -23,7 +23,9 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 
 ## Esquema Relacional
 
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
+O desenvolvimento do aplicativo, assim como a ideia inicial, tem como propósito a troca de informações através de mensagens. Com isso em mente, podemos analisar o diagrama a seguir onde, uma pessoa pode logar no sistema criando um usuário. Um usuário pode realizar postagens de muitas mensagens, assim como um usuário também pode realizar vários comentários. Uma mensagem pode ter vários comentários. E por último, um usuário pode ter vários grupos de bairros, assim como um bairro pode receber várias mensagens. Com base nesse diagrama o desenvolvimento da persistência de dados no banco será desenvolvido. 
+
+ 
  
 ![Diagrama de Entidade Relacionamento](img/DER_The_News.png)
 
