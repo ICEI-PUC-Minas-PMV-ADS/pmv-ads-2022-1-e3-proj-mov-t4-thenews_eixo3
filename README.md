@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# The NEWS -  Notícias de Bairros
 
 `Análise e Desenvolvimento de Sistemas`
 
