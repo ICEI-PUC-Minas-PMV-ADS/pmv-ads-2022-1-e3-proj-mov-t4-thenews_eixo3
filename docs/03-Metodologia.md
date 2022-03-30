@@ -1,6 +1,14 @@
 
 # Metodologia
 
+|    Ambiente                    | Plataforma        |Link de Acesso     |
+|--------------------------------|-------------------|-------------------|
+|Repositório de código fonte     | GitHub            | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e3-proj-mov-t4-thenews_eixo3  |
+|Documentos do projeto           | OneDrive          | https://onedrive.live.com/view.aspx?cid=0&resid=8A9B463EDDC34DF5!1659&origin=DigestEmail&extension=extension&e=QzUS16aUq0WfdCT91RUgFA&at=20   |
+|Wireframes           | Canva         | https://www.figma.com/file/lDmwJnp26j3yHD8165F2Iy/TheNews    |
+
+
+
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
 Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
