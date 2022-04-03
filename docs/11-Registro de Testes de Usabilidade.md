@@ -290,4 +290,28 @@ Evidência
 ______________________________________________________________________________________________________________________________________________________________________
 
 
+Caso de Teste	CT-11 – Filtrar por tipo de noticia
+Requisitos
+Associados	RF-07
+
+
+Objetivo do
+Teste	Avaliar interação de usuário com filtragem de notícias no aplicativo.
+
+
+Passos	
+
+1) Acessar o aplicativo.
+2) Realizar o login como comerciante.
+3) Clicar no menu “NEWS”
+4) Clicar no ícone “FILTRAR”
+5) Selecionar os filtros: promoção, evento ou utilidade pública.
+ 
+ 
+Resultado	Passos 1, 2, 3, 4 e 5 realizados com sucesso.
+
+
+______________________________________________________________________________________________________________________________________________________________________
+
+
 
