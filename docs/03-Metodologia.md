@@ -73,15 +73,11 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 · Bloqueado: quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está impedindo a realização da tarefa.
 
 
+Segue abaixo uma imagem do nosso quadro no trello, que está disponibilizado na URL a seguir https://trello.com/b/nfIKyVMf/processo-de-produ%C3%A7%C3%A3o-mobile
 
-![image](https://user-images.githubusercontent.com/83511889/161430758-2528ccce-f1bf-42e5-9e1f-1834b4de3f2a.png)
-O quadro Kanban do grupo no Trello estará disponível na URL
+![image](https://user-images.githubusercontent.com/83511889/161431398-246c5dd6-5af6-457c-a62a-c4d98d604857.png)
 
-https://trello.com/b/nfIKyVMf/processo-de-produ%C3%A7%C3%A3o-mobile
-
-
-
-## Gestão de Código Fonte
+## Ferramentas
 
 As ferramentas empregadas no projeto são:
 
@@ -114,14 +110,6 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
 
-> **Links Úteis**:
-> - [Microfundamento: Gerência de Configuração](https://pucminas.instructure.com/courses/87878/)
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
 
 
