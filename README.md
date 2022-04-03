@@ -1,23 +1,24 @@
-# The News
+# The NEWS -  Notícias de Bairros
 
 `Análise e Desenvolvimento de Sistemas`
 
-`DESENVOLVIMENTO DE UMA APLICAÇÃO MÓVEL EM UM AMBIENTE DE NEGÓCIO`
+`Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
 
-`Terceiro Semestre`
+`Eixo 3`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O foco do projeto e melhorar a forma de comunicação e propagação de noticias de pessoas que vivem no mesmo bairro. A ferramenta proposta tem um design minimalista o que facilita na navegação e facilidade no uso e consequentemente na facilidade de propagação de noticias. Com a criação de um aplicativo móvel hiper local, comércios e serviços podem divulgar seus estabelecimentos, assim moradores do bairro e comerciantes podem se beneficiar de uma gama maior de serviços oferecidos.
+
 
 ## Integrantes
 
-* MATEUS VITORINO 
-* ALFREDO LATORRE
-* DENISON AMARAL
-* NATÁLIA GATTI
+* Alfredo Latorre
+* Denison Amaral
+* Mateus Vitorino Guimarães
+* Natália Gatti
 
 ## Orientador
 
-* Matheus
+* Mateus Curcino de Lima
 
 ## Instruções de utilização
 
