@@ -22,8 +22,12 @@ Neste item, serão apresentadas, com maiores detalhes, as telas da aplicação, 
 Inicialmente, podemos analisar a construção da proposta. Como objetivamos apresentar uma proposta de calmaria e um aspecto, optamos por cores relacionado com a cor purpura e tons de salmão, cor que incentiva a conversa, conforme a psicologia afirma. “A sensação de calmaria e tranquilidade também estão relacionados com o roxo. Por essa razão, vários temas espirituais e ligados à fé são representados com esta cor.” O roxo ainda representa a imagem do sucesso, da nobreza e da riqueza.
 A cor salmão, além disso, transmite um senso de abundância e também incentiva a conversa dentro de um espaço. Está associada à felicidade.
 Assim, segue abaixo a demonstração das paletas de cores com base no que está sendo proposto para a construção do aplicativo.
+
+
 ![image](https://user-images.githubusercontent.com/83511889/161438680-393813ba-3a3d-4db4-8435-ed9c5772af64.png)
 ![image](https://user-images.githubusercontent.com/83511889/161438682-21da5999-a0c8-49c5-8a72-3925a6935063.png)
+
+
 The News é uma plataforma clara e objetiva.
 
 Tela Inicial 
