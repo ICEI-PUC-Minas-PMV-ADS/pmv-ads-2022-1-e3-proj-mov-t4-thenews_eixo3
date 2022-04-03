@@ -7,14 +7,21 @@ Para que o projeto em desenvolvimento seja efetivo e resolutivo quanto às deman
 
 A partir das entrevistas, foram definidas as personas representadas a seguir:
 
-![image](https://user-images.githubusercontent.com/91228646/160673778-7e5bbe1f-0e7c-4bd4-bb3b-a059646dc377.png)
-![image](https://user-images.githubusercontent.com/91228646/160674009-25d7dc11-5b0a-40de-938c-6fd92cd4914a.png)
-![image](https://user-images.githubusercontent.com/91228646/160674207-59357522-92f3-451f-974b-11152837048c.png)
-![image](https://user-images.githubusercontent.com/91228646/160674422-bb41f28f-e186-4d37-bab6-947ae84e982d.png)
+![Persona1](img/persona1.jpg)
+![Persona2](img/persona2.jpg)
+![Persona3](img/persona3.jpg)
+![Persona4](img/persona4.jpg)
 
 ## Histórias de Usuários
 
-![image](https://user-images.githubusercontent.com/91228646/160674618-c5067f21-9261-494a-9d25-f5e2b3ef8020.png)
+|Eu como … [PERSONA]                            | … quero/desejo … [O QUE]                              | … para que .... [POR QUE]  |
+|-----------------------------------------------|-------------------------------------------------------|----------------------------|
+|Eu, Miguel Dias, como estudante de jornalismo, | desejo escrever matérias sobre a vida cotidiana na minha região  | para melhorar a interatividade entre os moradores.  |
+| Eu, Miguel Dias, como estudante de jornalismo,   |  desejo divulgar vagas e oportunidades de negócio       | para contribuir com o crescimento econômico da minha região  |
+| Eu, Maura Regina, como funcionária pública   |   desejo encontrar prestadores de serviço na minha região     | para diminuir custos com transporte de trabalhadores de regiões mais distantes do meu bairro  |
+|  Eu, Catarina, como proprietária de loja de roupas,  |   desejo divulgar ofertas e promoções da minha loja     | para atingir os moradores da minha região de forma mais efetiva  |
+| Eu, Carla Figueira, como doceira   |   desejo divulgar o meu trabalho e informações de contato com meus potenciais clientes      | para melhorar a abrangência na minha região e melhorar minha renda.  |
+
 
 ## Requisitos do Projeto
 
@@ -24,13 +31,17 @@ De acordo com Canguçu (2021), “requisito é a propriedade que um software exi
 
 A seguir, apresentamos uma tabela que reúne e identifica os requisitos funcionais do projeto, bem como indica a prioridade em que esses devem ser executados.
 
-![image](https://user-images.githubusercontent.com/91228646/160675175-85f05989-dee3-4984-bd13-ae90c5cf18e9.png)
+![Requisitos](img/requisitos.jpg)
 
 ### Requisitos não Funcionais
 
 A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender. 
 
-![image](https://user-images.githubusercontent.com/91228646/160675493-c6a0e9da-2211-4a11-8b60-438ae8dc5c4f.png)
+|ID     | Descrição                                                                                              |Prioridade|
+|-------|--------------------------------------------------------------------------------------------------------|----------|
+|RNF-01 | O aplicativo deverá ser thinclient.                                                                    |ALTA      |
+|RNF-02 | O aplicativo deverá ter uma fonte padrão para todas as escritas, com alterações apenas no tamanho.     |ALTA      |
+|RNF-03 |O aplicativo deve ser compatível com os principais dispositivos móveis do mercado.                      |ALTA      |
 
 ## Restrições
 

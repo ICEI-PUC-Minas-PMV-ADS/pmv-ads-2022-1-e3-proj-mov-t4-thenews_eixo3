@@ -1,5 +1,9 @@
 # Introdução
+O avanço da tecnologia traz consigo o aumento da velocidade nas atividades cotidianas. Desde o surgimento da internet tem-se um mundo cada vez mais conectado e globalizado. As mudanças ocorridas durante esse processo, não devem ser vistas como uma coisa nova ou problema; ao contrário, a mesma deve ser observada como oportunidade para atingir os objetivos e os interesses. Desta forma, um surgimento de um novo recurso comunicativo virou a chave para as inovações e avanços tecnológicos: as aplicações mobile.  
 
+ Para Pereira, D. M., & Silva, G. S. (2020) as mudanças ocorridas nos processos de desenvolvimento - e suas consequências na democracia e cidadania – concorrem para uma sociedade caracterizada pela crescente influência dos recursos tecnológicos e pelo avanço exponencial das Tecnologias de Informação e Comunicação (TICs), com impacto nas relações sociais, empresariais e nas instituições. Os App’s facilitam esses avanços, pois a comunicação se torna instantânea uma vez que eles já se encontram instalados e configurados em seu Smartphone, o que se torna muito mais simples de acessar como um site, por exemplo.  
+
+Em suma, no Brasil, 79,3% das pessoas com mais de 10 anos têm um celular (IBGE 2014) desta forma, o uso das aplicações mobile se torna cada vez mais frequente e gerando novas formas de acesso as informações globais, criando recursos que possibilitam uma comunicação instantânea e práticas que auxiliam no cotidiano. 
 
 ## Problema
 De que forma podemos divulgar notícias e serviços de uma forma eficaz e atual onde não demore um dia inteiro para ser postado e ocorra a interação social de todos moradores do bairro?
