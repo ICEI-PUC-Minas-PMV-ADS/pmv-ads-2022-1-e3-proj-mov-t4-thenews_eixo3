@@ -60,7 +60,7 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Diagrama de Casos de Uso
 
-![Diagrama de Entidade Relacionamento](img/Diagrama_casoDeUso.jpg)
+![Diagrama de Entidade Relacionamento](img/Diagrama_casoDeUso-1.jpg)
 
 # Matriz de Rastreabilidade
 
