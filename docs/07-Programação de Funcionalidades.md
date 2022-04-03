@@ -1,15 +1,27 @@
 # Programação de Funcionalidades
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+ FUNCIONALIDADES DO SISTEMA (TELAS)
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo
+Nesta seção, são apresentadas as telas desenvolvidas para cada uma das funcionalidades do sistema.  O respectivo endereço (URL) e outras orientações de acesso são apresentadas na sequência.
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+Tela Principal (RF-01)
+A tela principal da aplicação conta com a apresentação sucinta da proposta - em texto e em vídeo em LIBRAS -. Conta, também, com botões que redirecionam para a apresentação de cada um dos tempos verbais, para o treinamento da Tarefa Labirinto e para a Tarefa Labirinto em si. 
+
+
+Requisito atendido:
+•	RF-01 - O website apresentará na tela introdutória, de forma clara e precisa, a proposta da aplicação.
+Artefatos da funcionalidade:
+•	index.html
+•	style.css
+•	logo.png
+•	Fluxo do usuário 
+•	Wireframe da tela de Apresentação
+
+
+Instruções de acesso
+Para acessar a nossa aplicação, hospedada no Heroku, basta clicar no seguinte link: 
+A visualização do código pode ser feita por meio do GitHub, no link a seguir: https://github.com/NataliaGatti666/pmv-ads-2022-1-e3-proj-mov-t4-thenews_eixo3/blob/main/docs/03-Metodologia.md
+
+
+
