@@ -10,7 +10,6 @@ import {
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Profile from './Profile'
 import Chat from  './Chat'
-import Home from './Home'
 import Bairro from './Neighborhood'
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -29,16 +28,6 @@ const HomeScreen = ({ navigation }) => {
           tabBarOptions={{
             activeTintColor: '#C68585',
           }}>
-          {/*<Tab.Screen
-            name="Home Stack"
-            component={Home}
-            options={{
-              tabBarLabel: 'Home',
-              tabBarIcon: ({ color, size }) => (
-                <MaterialCommunityIcons name="home" color={color} size={size} />
-              ),
-            }}
-          />*/}
 
           <Tab.Screen
             name="Bairros"

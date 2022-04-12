@@ -3,8 +3,10 @@ import {Button, View, Text} from 'react-native';
 import { TextInput, Alert } from 'react-native-paper';
 import ImageUpload from '../../components/UploadImage'
 
-export default function Cadastrar() {
-  const uri2 = 'https://the-news-back-end.herokuapp.com/submitmessage';
+export default function Cadastrar(props) {
+   const { idBairro, nomeBairro } = props.route.params;
+
+  const uri2 = 'https://the-news-back-end.herokuapp.com/enviarmensagembairro';
 
   // Limpa os campos após postagem
   const [titleMessage, setTitleMessage] = useState('');
@@ -22,7 +24,7 @@ export default function Cadastrar() {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ titleMessage, messageField, imgField }),
+        body: JSON.stringify({ titleMessage, messageField, imgField, idBairro }),
       });
       this.textInputNome.clear()
       this.textInputMsm.clear()
@@ -32,6 +34,7 @@ export default function Cadastrar() {
 
   return (
     <View style={{padding:5, margin:10}}>
+    <Text>Você vai postar uma mensagem no bairro: {nomeBairro}</Text>
       <TextInput
         ref={inputMsm => { this.textInputMsm = inputMsm }}
         placeholder="Titulo"

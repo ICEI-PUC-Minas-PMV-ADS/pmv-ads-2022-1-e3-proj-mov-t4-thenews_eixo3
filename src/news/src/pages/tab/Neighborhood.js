@@ -1,93 +1,135 @@
-import * as React from 'react';
+// Searching using Search Bar Filter in React Native List View
+// https://aboutreact.com/react-native-search-bar-filter-on-listview/
+
+// import React in our code
+import React, { useState, useEffect } from 'react';
+
+// import all the components we are going to use
 import {
-  TouchableOpacity,
+  SafeAreaView,
+  Text,
   StyleSheet,
   View,
-  Text,
-  SafeAreaView,
-  ScrollView,
+  FlatList,
   TextInput,
+  ScrollView,
+  ActivityIndicator,
 } from 'react-native';
 
-import { Icon } from 'react-native-elements';
+import { FAB } from 'react-native-paper';
 
-const NewsScreen = ({ navigation }) => {
+const App = (props) => {
+  const [search, setSearch] = useState('');
+  const [filteredDataSource, setFilteredDataSource] = useState([]);
+  const [masterDataSource, setMasterDataSource] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://the-news-back-end.herokuapp.com/bairros')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        setFilteredDataSource(responseJson);
+        setMasterDataSource(responseJson);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  const searchFilterFunction = (text) => {
+    // Check if searched text is not blank
+    if (text) {
+      // Inserted text is not blank
+      // Filter the masterDataSource and update FilteredDataSource
+      const newData = masterDataSource.filter(function (item) {
+        // Applying filter for the inserted text in search bar
+        const itemData = item.nomeBairro
+          ? item.nomeBairro.toUpperCase()
+          : ''.toUpperCase();
+        const textData = text.toUpperCase();
+        return itemData.indexOf(textData) > -1 ;
+      });
+      setFilteredDataSource(newData);
+      setSearch(text);
+    } else {
+      // Inserted text is blank
+      // Update FilteredDataSource with masterDataSource
+      setFilteredDataSource(masterDataSource);
+      setSearch(text);
+    }
+  };
+
+  const ItemView = ({ item }) => {
+    return (
+      // Flat List Item
+
+      <Text
+        style={styles.itemStyle}
+        onPress={() =>
+          props.navigation.navigate('News', {
+            idBairro: item.idBairro,
+            nomeBairro: item.nomeBairro,
+          })
+        }>
+        {item.nomeBairro.toUpperCase()}
+      </Text>
+    );
+  };
+
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
-      <ScrollView>
-        <View style={{ flex: 1, padding: 16 }}>
-          <View
-            style={{
-              flex: 1,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <TouchableOpacity style={styles.container}>
-              <Icon style={styles.icon} name="search" color="#517fa4" />
-              <TextInput placeholder="Neighborhood Search " style={styles.input} />
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => navigation.navigate('News')}>
-              <Text style={{ fontSize: 20 }}>PADARIAS</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => navigation.navigate('News')}>
-              <Text style={{ fontSize: 20 }}>PADRE EUSTÁQUIO</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => navigation.navigate('News')}>
-              <Text style={{ fontSize: 20 }}>CENTRO</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => navigation.navigate('News')}>
-              <Text style={{ fontSize: 20 }}>SANTA TERESA</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => navigation.navigate('News')}>
-              <Text style={{ fontSize: 20 }}>SAVASSI</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => navigation.navigate('News')}>
-              <Text style={{ fontSize: 20 }}>SÃO LUCAS</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => navigation.navigate('News')}>
-              <Text style={{ fontSize: 20 }}>CONFINS</Text>
-            </TouchableOpacity>
+    <SafeAreaView>
+      {isLoading ? (
+        <ActivityIndicator size="large" color="#0000ff" />
+      ) : (
+        <View>
+          <View>
+            <ScrollView >
+              <View style={styles.container}>
+                <TextInput
+                  style={styles.textInputStyle}
+                  onChangeText={(text) => searchFilterFunction(text)}
+                  value={search}
+                  placeholder="Procurar Bairro"
+                />
+                <View style={{ flex: 1 }}>
+                  <FlatList
+                    data={filteredDataSource}
+                    keyExtractor={(item, index) => index.toString()}
+                    renderItem={ItemView}
+                  />
+                </View>
+              </View>
+            </ScrollView>
           </View>
+
+          <FAB
+            style={styles.fab}
+            small
+            icon="crosshairs-gps"
+            onPress={() => alert('Pegar Posição GPS')}
+          />
         </View>
-      </ScrollView>
+      )}
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex:1,
-    flexDirection:"row",
-    alignItems:"baseline"
+    backgroundColor: 'white',
   },
-  button: {
+  itemStyle: {
     alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: 'white',
     padding: 10,
-    width: 300,
+    width: '95%',
     marginTop: 16,
+    margin: 10,
     borderRadius: 10,
+    textAlign: 'center',
 
     shadowColor: '#000',
     shadowOffset: {
@@ -98,14 +140,22 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  input: {
+  textInputStyle: {
     height: 40,
-    width:"70%",
-    margin: 12,
     borderWidth: 1,
-    padding: 10,
-    borderRadius: 15,
+    borderRadius: 5,
+    paddingLeft: 20,
+    margin: 5,
+    borderColor: '#009688',
+    backgroundColor: '#FFFFFF',
   },
-
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 0,
+    bottom: 0,
+    backgroundColor: '#C68585',
+  },
 });
-export default NewsScreen;
+
+export default App;

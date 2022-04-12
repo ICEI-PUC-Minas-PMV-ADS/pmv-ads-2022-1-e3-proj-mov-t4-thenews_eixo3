@@ -22,7 +22,7 @@ const Tab = createBottomTabNavigator();
 export default function (props) {
   return (
     <View style={styles.container}>
-      <Image style={styles.stretch} source={require('../assets/Logo.png')} />
+      <Image style={styles.stretch} resizeMode={'contain'}  source={require('../assets/LOGO-1.png')} />
       <InputComponent placeholder="Email" />
       <InputComponent placeholder="Senha" />
       <TouchableOpacity
@@ -39,13 +39,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     justifyContent: 'flex-end',
-    paddingBottom: '20%',
+    paddingBottom: '10%',
   },
   stretch: {
     flex: 1,
-    margin: 5,
+    margin:"15%",
     justifyContent: 'center',
     alignItems: 'center',
+
   },
   button: {
     alignItems: 'center',

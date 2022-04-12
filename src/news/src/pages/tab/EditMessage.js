@@ -10,14 +10,14 @@ import {
 import { TextInput, Alert, Card, Title } from 'react-native-paper';
 import { Input, Icon } from 'react-native-elements';
 
-export default function Cadastrar({ route, navigation }) {
+export default function Cadastrar(props, { route, navigation }) {
   //pega o id dos parametros de rota, exportado no arquivo MESSAGECARD.JS na ação de clicar
-  const { id } = route.params;
+  const { id, idBairro } = props.route.params;
 
   const [dados, setData] = useState([]);
   const getCardsMessages = async () => {
     const response = await fetch(
-      `https://the-news-back-end.herokuapp.com/messages/${id}`
+      `https://the-news-back-end.herokuapp.com/menssagensbyidupdate/${id}`
     );
     const jsonObj = await response.json();
     setData(jsonObj);
@@ -35,48 +35,58 @@ export default function Cadastrar({ route, navigation }) {
   const [titleMessage, setTitleMessage] = useState('');
   const [messageField, setMessageField] = useState('');
   const [imgField, setImgField] = useState('');
-  
+
   const simpleAlertHandler = () => {
     alert('Mensagem ATUALIZADA');
   };
 
   const atualizar = async () => {
+    const navegarPagina = () => {
+              
+          props.navigation.navigate('News', {idBairro})
+        
+    }
+
     const resp = await fetch(
       `https://the-news-back-end.herokuapp.com/update/${id}`,
       {
-        method: 'PATCH',
+        method: 'PUT',
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ titleMessage, messageField, imgField, id }),
+        body: JSON.stringify({
+          titleMessage,
+          messageField,
+          imgField,
+          id,
+          idBairro,
+        }),
       }
     );
 
     simpleAlertHandler();
-    navigation.navigate('NewsScreen');
+    navegarPagina(props);
   };
 
   //Verifica se retorna dados na API
-  if (dados[0]?.id != undefined) {
+  if (dados[0]?.idMensagens != undefined) {
     return (
       <View style={{ flex: 1, padding: 24 }}>
         {dados.map((dado) => {
           return (
-            <View key={dado.id}>
-              <TextInput value={'ID: ' + dado.id} />
+            <View key={dado.idMensagens}>
+              <TextInput value={'ID: ' + dado.idMensagens} />
 
               <TextInput
                 placeholder="Titulo"
-                onChangeText={(newText) => setText(newText)}
-                defaultValue={dado.titleMessage}
-                onChange={(e) => setTitleMessage(e.target.value)}
+                onChangeText={(newText) => setTitleMessage(newText)}
+                defaultValue={dado.titulo}
               />
 
               <TextInput
-                onChangeText={(newText) => setText(newText)}
-                defaultValue={dado.messageField}
-                onChange={(e) => setMessageField(e.target.value)}
+                onChangeText={(newText) => setMessageField(newText)}
+                defaultValue={dado.mensagem}
               />
 
               <Text style={{ margin: 10, padding: 10 }}>
@@ -88,6 +98,6 @@ export default function Cadastrar({ route, navigation }) {
       </View>
     );
   } else {
-    return <Text>CARREGADO...</Text>;
+    return <ActivityIndicator  size="large" color="#0000ff" /> ;
   }
 }
