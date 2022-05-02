@@ -78,52 +78,57 @@ const NewsScreen = (props) => {
           </Text>
 
           <View>
-        {isLoading ? (
-            <ActivityIndicator size="large" color="#0000ff" />
-          ) : (
-        <View>
-          {dados == 0 ? (
-            <Text style={{textAlign:'center', marginTop:60, fontWeight: "bold"}}>Mensagem sem comentários</Text>
-          ) : (
-              <ScrollView style={{ marginBottom: 200 }}>
-                <FlatList
-                  data={dados}
-                  keyExtractor={({ messageId }, index) => messageId}
-                  renderItem={({ item }) => (
-                    <View>
-                      <View style={styles.container}>
-                        <TouchableOpacity onPress={() => {}}>
-                          <Image
-                            style={styles.image}
-                            source={require('../../assets/1.png')}
-                          />
-                        </TouchableOpacity>
-                        <View style={styles.content}>
-                          <View style={styles.contentHeader}>
-                            <Text style={styles.name}>
-                              Nº {item.idComentarios}
-                            </Text>
-                            <Text style={styles.time}>10:58 am</Text>
-                          </View>
-                          <View style={styles.contentFooter}>
-                            <Text>{item.comentariosMensagens}</Text>
-                            <TouchableOpacity
-                              style={styles.icon}
-                              onPress={() => {}}>
-                              <Icon name="delete" color="#517fa4" />
+            {isLoading ? (
+              <ActivityIndicator size="large" color="#0000ff" />
+            ) : (
+              <View>
+                {dados == 0 ? (
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      marginTop: 60,
+                      fontWeight: 'bold',
+                    }}>
+                    Mensagem sem comentários
+                  </Text>
+                ) : (
+                  <ScrollView style={{ marginBottom: 200 }}>
+                    <FlatList
+                      data={dados}
+                      keyExtractor={({ messageId }, index) => messageId}
+                      renderItem={({ item }) => (
+                        <View>
+                          <View style={styles.container}>
+                            <TouchableOpacity onPress={() => {}}>
+                              <Image
+                                style={styles.image}
+                                source={require('../../assets/1.png')}
+                              />
                             </TouchableOpacity>
+                            <View style={styles.content}>
+                              <View style={styles.contentHeader}>
+                                <Text style={styles.name}>
+                                  Nº {item.idComentarios}
+                                </Text>
+                                <Text style={styles.time}>10:58 am</Text>
+                              </View>
+                              <View style={styles.contentFooter}>
+                                <Text>{item.comentariosMensagens}</Text>
+                                <TouchableOpacity
+                                  style={styles.icon}
+                                  onPress={() => {}}>
+                                  <Icon name="delete" color="#517fa4" />
+                                </TouchableOpacity>
+                              </View>
+                            </View>
                           </View>
                         </View>
-                      </View>
-                    </View>
-                  )}
-                />
-              </ScrollView>
+                      )}
+                    />
+                  </ScrollView>
+                )}
+              </View>
             )}
-            
-            </View>
-          )}
-            
           </View>
         </View>
 
@@ -172,7 +177,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginBottom: 6,
   },
-    contentFooter: {
+  contentFooter: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 6,

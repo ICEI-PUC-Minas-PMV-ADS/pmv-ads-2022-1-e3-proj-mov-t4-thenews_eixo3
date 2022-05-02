@@ -11,6 +11,8 @@ import {
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 import { Icon } from 'react-native-elements';
 
+import {getCardsMessages} from '../services/api/getCardsMessages'
+
 import app from '../../App.js';
 
 //Recebe a propriedade navigation para clicar e ir para a pagina de EDITAR
@@ -19,22 +21,16 @@ export default function MessageCards(props, { navigation, route }) {
   const [data, setData] = useState([]);
 
   //Metodo que pega todas as mensagens
-  const getCardsMessages = async () => {
-    try {
-      const response = await fetch(
-        `https://the-news-back-end.herokuapp.com/getmensagembairro/${props.idBairro}`
-      );
-      const jsonObj = await response.json();
-      setData(jsonObj);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
+
+  
   useEffect(() => {
-    getCardsMessages();
+(async () =>
+{  setLoading(true)
+  const messages = await getCardsMessages(props.idBairro)
+  setData(messages);
+  setLoading(false)}
+)();
   }, []);
 
   const LeftContent = (props) => <Avatar.Icon {...props} icon="file" />;

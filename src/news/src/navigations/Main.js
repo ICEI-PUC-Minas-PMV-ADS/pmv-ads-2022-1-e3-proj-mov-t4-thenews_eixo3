@@ -11,6 +11,7 @@ import CommentsScreen from '../pages/tab/Comments'
 import EditMessage from '../pages/tab/EditMessage'
 import News from '../pages/tab/News'
 import Bairro from '../pages/tab/Neighborhood'
+import Cadastrar from '../pages/Signup'
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ function App() {
         <Stack.Screen name="EditMessage" component={EditMessage} />
         <Stack.Screen name="News" component={News} />
         <Stack.Screen name="Bairro" component={Bairro} />
+        <Stack.Screen name="Cadastrar" component={Cadastrar} />
       </Stack.Navigator>
     </NavigationContainer>
   );

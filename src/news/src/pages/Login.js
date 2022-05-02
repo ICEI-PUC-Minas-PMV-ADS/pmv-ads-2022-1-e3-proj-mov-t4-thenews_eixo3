@@ -7,6 +7,7 @@ import {
   ImageBackground,
   Button,
   Text,
+  TextInput
 } from 'react-native';
 
 import InputComponent from '../components/Input';
@@ -20,14 +21,41 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Tab = createBottomTabNavigator();
 
 export default function (props) {
+
+const [email, setEmail] = useState('')
+const [senha, setSenha] = useState('')
+const [data, setData] = useState('')
+
+const getUser = async () => {
+    try {
+      const response = await fetch(
+        `https://the-news-back-end.herokuapp.com/user/email/${email}`
+      );
+      if (! data == []){
+      props.navigation.navigate('Index')
+    }
+    else {
+      console.log('usuario invalido')
+    }
+      const jsonObj = await response.json();
+      setData(jsonObj);
+    } catch (error) {
+      console.error(error);
+    } 
+    
+  };
+
+
+
+
   return (
     <View style={styles.container}>
       <Image style={styles.stretch} resizeMode={'contain'}  source={require('../assets/LOGO-1.png')} />
-      <InputComponent placeholder="Email" />
-      <InputComponent placeholder="Senha" />
+      <TextInput style={styles.input} placeholder="Email" onChangeText={(text) => setEmail(text)} />
+      <TextInput style={styles.input} placeholder="Senha" onChangeText={(text) => setSenha(text)} />
       <TouchableOpacity
         style={styles.button}
-        onPress={() => props.navigation.navigate('Index')}>
+        onPress={() => getUser()}>
         <Text style={styles.text}>ENTRAR</Text>
       </TouchableOpacity>
     </View>
@@ -64,5 +92,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: 'white',
+  },
+   input: {
+    backgroundColor: '#FFF',
+    marginTop:15,
+    marginBottom: 8,
+    height:50,
+    paddingLeft:10,
+    borderBottomWidth:1,
+    borderBottomColor:'black',
+    fontSize:'20'
   },
 });
