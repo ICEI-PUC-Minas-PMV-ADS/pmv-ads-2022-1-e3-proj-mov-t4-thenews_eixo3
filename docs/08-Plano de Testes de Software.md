@@ -7,11 +7,12 @@
 |Passos                   | 1) Acessar o aplicativo 2) Clicar no botão CADASTRAR 3) Visualizar a tela de cadastro |
 |Critérios de Êxito       |A página deve apresentar uma mensagem: “Usuário cadastrado com sucesso” |
 
+
 |Caso de Teste            | CT-02 – Realizar login na tela inicial utilizando “3rd party”   |
 |-------------------------|-----------------------------------------|
 |Requisitos Associados    | RF-01                                   |
 |Objetivo do teste        |Avaliar interação do usuário com login de facebook ou google.  |
-|Passos                   | 1) Acessar o aplicativo  2) Clicar no botão fazer login com GOOGLE ou FACEBOOK  3) Visualizar a tela do facebook ou GOOGLE   |
+|Passos                   | 1) Acessar o aplicativo  2) Clicar no botão fazer login  3) Visualizar a tela   |
 |Critérios de Êxito       |A página deve apresentar uma mensagem: “Usuário cadastrado com sucesso” |
 
 
