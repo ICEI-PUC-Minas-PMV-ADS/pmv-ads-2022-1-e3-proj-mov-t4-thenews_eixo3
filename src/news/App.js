@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-
-import Main from './src/navigations/Main';
+import Main from "./src/navigations/Main";
 
 const App = () => {
   return <Main />;

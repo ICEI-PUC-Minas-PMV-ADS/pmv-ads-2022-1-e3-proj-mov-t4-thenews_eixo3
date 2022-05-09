@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   TouchableOpacity,
   StyleSheet,
@@ -6,31 +6,33 @@ import {
   Text,
   SafeAreaView,
   Image,
-} from 'react-native';
+} from "react-native";
 
-import { Icon } from 'react-native-elements';
+import { Icon } from "react-native-elements";
 
 const HomeProfile = ({ route, navigation }) => {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
-      <View style={{ flex: 1, padding: 16, }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
+      <View style={{ flex: 1, padding: 16 }}>
         <View
           style={{
             flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Text
             style={{
               fontSize: 25,
-              textAlign: 'center',
+              textAlign: "center",
               marginBottom: 16,
-            }}>
+            }}
+          >
             Tela de Profile
           </Text>
 
           <Image
-            source={require('../../assets/Profile.png')}
+            source={require("../../assets/Profile.png")}
             style={{ width: 120, height: 120, borderRadius: 120 / 2 }}
           />
           <TouchableOpacity style={styles.button}>
@@ -47,23 +49,25 @@ const HomeProfile = ({ route, navigation }) => {
           <View style={{ marginTop: 50 }}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.navigate('DetailsScreenProfile')}>
+              onPress={() => navigation.navigate("DetailsScreenProfile")}
+            >
               <Icon style={styles.icon} name="search" color="#517fa4" />
               <Text>Sobre</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.navigate('ProfileScreenProfile')}>
+              onPress={() => navigation.navigate("ProfileScreenProfile")}
+            >
               <Text>Configurações</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.navigate('Welcome')}>
+              onPress={() => navigation.navigate("Welcome")}
+            >
               <Text>SAIR</Text>
             </TouchableOpacity>
-            
           </View>
         </View>
       </View>
@@ -72,23 +76,23 @@ const HomeProfile = ({ route, navigation }) => {
 };
 const styles = StyleSheet.create({
   button: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#DDDDDD',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#DDDDDD",
     padding: 10,
     width: 300,
     marginTop: 16,
     borderRadius: 20,
   },
   icon: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
     paddingRight: 20,
   },
   text: {
-    textAlign: 'center',
+    textAlign: "center",
   },
 });
 export default HomeProfile;
