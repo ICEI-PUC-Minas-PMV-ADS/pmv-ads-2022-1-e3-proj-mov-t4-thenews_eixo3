@@ -43,6 +43,18 @@ export default function (props) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [data, setData] = useState("");
+  const [database, setDatabase] = useState([]);
+  console.warn(database);
+
+  const lastPositionDatabase = database?.length - 1;
+  const lastEmail =
+    typeof lastPositionDatabase === "number"
+      ? database[lastPositionDatabase]?.email
+      : "";
+  const lastSenha =
+    typeof lastPositionDatabase === "number"
+      ? database[lastPositionDatabase]?.senha
+      : "";
 
   useEffect(() => {
     db.transaction((tx) => {
@@ -52,7 +64,8 @@ export default function (props) {
     });
     db.transaction((tx) => {
       tx.executeSql("select * from login", [], (_, { rows }) => {
-        console.log("db", JSON.stringify(rows));
+        // console.log("db", JSON.stringify(rows));
+        setDatabase(rows._array);
       });
     }, null);
   }, []);
@@ -83,11 +96,13 @@ export default function (props) {
         source={require("../assets/LOGO-1.png")}
       />
       <TextInput
+        defaultValue={lastEmail}
         style={styles.input}
         placeholder="Email"
         onChangeText={(text) => setEmail(text)}
       />
       <TextInput
+        defaultValue={lastSenha}
         style={styles.input}
         placeholder="Senha"
         onChangeText={(text) => setSenha(text)}
