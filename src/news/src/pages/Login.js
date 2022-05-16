@@ -106,6 +106,7 @@ export default function (props) {
         style={styles.input}
         placeholder="Senha"
         onChangeText={(text) => setSenha(text)}
+        secureTextEntry={true}
       />
       <TouchableOpacity
         style={styles.button}
